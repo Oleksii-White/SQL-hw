@@ -1,4 +1,5 @@
 USE hr;
+
 -- 1
 SELECT
 	first_name,
