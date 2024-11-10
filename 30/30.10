@@ -1,0 +1,14 @@
+1. 
+SELECT title FROM goods
+UNION ALL
+SELECT title FROM goods_2;
+
+2.
+SELECT title FROM goods
+UNION
+SELECT title FROM goods_2;
+
+3.
+SELECT title, NULL AS price FROM goods
+UNION ALL
+SELECT title, price FROM goods_2;
