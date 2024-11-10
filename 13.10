@@ -1,0 +1,17 @@
+1. 
+SELECT c.title 
+FROM competencies c
+LEFT JOIN teachers2competencies t2c ON c.id = t2c.competencies_id
+WHERE t2c.teacher_id IS NULL;
+
+2.
+SELECT co.title AS course_title, s.name AS headman_name
+FROM courses co
+JOIN students s ON co.headman_id = s.id;
+
+3.
+SELECT st.name AS student_name, headman.name AS headman_name
+FROM students st
+JOIN students2courses s2c ON st.id = s2c.id
+JOIN courses co ON s2c.course_id = co.id
+JOIN students headman ON co.headman_id = headman.id;
